@@ -6,7 +6,7 @@ Modern, ölçeklenebilir ve kullanıcı dostu bir Gayrimenkul CRM (Customer Rela
 
 
 
-# Özellikler
+## Özellikler
 
 
 ### Kimlik Doğrulama & Yetkilendirme
@@ -59,7 +59,7 @@ Modern, ölçeklenebilir ve kullanıcı dostu bir Gayrimenkul CRM (Customer Rela
 
 
 
-# Kullanılan Teknolojiler
+## Kullanılan Teknolojiler
 
 ### Frontend
 - Angular 15+
