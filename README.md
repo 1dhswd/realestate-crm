@@ -73,4 +73,91 @@
 
 
 
+## Proje Yapısı (Frontend)
+
+```
+src/
+ ├── app/
+ │   ├── core/           # Guards, Interceptors, Services
+ │   ├── features/       # Customers, Leads, Properties
+ │   ├── layout/         # Navbar, Sidebar
+ │   ├── shared/         # Reusable components
+ │   └── app.module.ts
+ ├── assets/
+ └── styles.scss
+```
+
+---
+
+## Kurulum
+
+### Frontend
+
+```bash
+npm install
+ng serve
+```
+
+Uygulama varsayılan olarak:
+
+```
+http://localhost:4200
+```
+
+### Backend
+
+```bash
+dotnet restore
+dotnet run
+```
+
+---
+
+## Ortam Değişkenleri
+
+Backend `appsettings.json` içinde:
+
+```json
+"Jwt": {
+  "Key": "your-secret-key",
+  "Issuer": "RealEstateCRM",
+  "Audience": "RealEstateCRMUsers"
+}
+```
+
+---
+
+## Responsive Desteği
+
+- Desktop
+- Tablet
+- Mobile
+
+Tüm tablolar, formlar ve toolbar bileşenleri **mobil uyumlu** olacak şekilde optimize edilmiştir.
+
+---
+
+##  Geliştirme Notları
+
+- Component bazlı mimari
+- Temiz ve sürdürülebilir kod
+- Tekrar kullanılabilir UI bileşenleri
+- Global stiller `styles.scss` üzerinden yönetilir
+
+
+
+## Geliştirici
+
+**Eren Mülkoğlu - Senior Software Engineer**
+Full Stack .NET & Angular Developer
+
+---
+
+## Lisans
+
+Bu proje eğitim ve portföy amaçlı sıfırdan geliştirilmiştir. 
+
+
+> Bu proje, gerçek hayat CRM ihtiyaçları göz önünde bulundurularak **kurumsal standartlarda** geliştirilmiştir.
+
 
