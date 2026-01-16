@@ -1,3 +1,10 @@
+# RealEstate CRM
+
+Modern, ölçeklenebilir ve kullanıcı dostu bir Gayrimenkul CRM (Customer Relationship Management) uygulaması. Proje; emlak ofisleri ve bireysel danışmanların müşteri, ilan (property) ve lead süreçlerini tek bir panelden profesyonel şekilde yönetebilmesi için geliştirilmiştir.
+(A modern, scalable, and user-friendly Real Estate CRM (Customer Relationship Management) application. The project was developed to enable real estate agencies and individual consultants to professionally manage client, property, and lead processes from a single dashboard.)
+
+
+
 # Özellikler
 
 
