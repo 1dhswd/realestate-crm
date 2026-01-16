@@ -51,6 +51,25 @@
 
 
 
+# Kullanılan Teknolojiler
+
+## Frontend
+- Angular 15+
+- Angular Material
+- Reactive Forms
+- RxJS
+- SCSS
+
+## Backend
+
+- ASP.NET Core Web API
+- Entity Framework Core
+- Repository Pattern
+- JWT Authentication
+
+
+## Database
+- Microsoft SQL Server
 
 
 
