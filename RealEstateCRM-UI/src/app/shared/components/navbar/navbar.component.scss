@@ -1,0 +1,55 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+  .logo {
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  .spacer {
+    flex: 1;
+  }
+}
+
+.user-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+
+  mat-icon {
+    font-size: 24px;
+  }
+}
+
+.user-name-toolbar {
+  font-weight: 500;
+}
+
+.user-info {
+  padding: 16px;
+  max-width: 220px;
+
+  .user-name {
+    margin: 0;
+    font-weight: 600;
+    color: #333;
+  }
+
+  .user-email {
+    margin: 4px 0 0;
+    font-size: 13px;
+    color: #666;
+    word-break: break-all;
+  }
+}
+
+@media (max-width: 768px) {
+  .user-name-toolbar {
+    display: none; 
+  }
+}

@@ -1,0 +1,170 @@
+<div class="property-detail-container" *ngIf="!loading && property">
+  <div class="header-actions">
+    <button mat-button (click)="goBack()">
+      <mat-icon>arrow_back</mat-icon>
+      Back to List
+    </button>
+    <button mat-raised-button color="primary" (click)="editProperty()">
+      <mat-icon>edit</mat-icon>
+      Edit Property
+    </button>
+  </div>
+
+  <mat-card class="property-info-card">
+    <mat-card-header>
+      <mat-card-title>{{ property.title }}</mat-card-title>
+      <mat-card-subtitle>
+        <mat-chip-set>
+          <mat-chip [class.active]="property.isActive">
+            {{ property.isActive ? 'Active' : 'Inactive' }}
+          </mat-chip>
+        </mat-chip-set>
+      </mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+      <div class="property-details">
+        <div class="detail-section">
+          <div class="detail-item highlight">
+            <mat-icon>attach_money</mat-icon>
+            <div>
+              <label>Price</label>
+              <p class="price">{{ formatPrice(property.price) }}</p>
+            </div>
+          </div>
+          <div class="detail-item highlight">
+            <mat-icon>square_foot</mat-icon>
+            <div>
+              <label>Area</label>
+              <p>{{ property.area }} m²</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-item">
+            <mat-icon>home</mat-icon>
+            <div>
+              <label>Type</label>
+              <p>{{ property.typeName || 'N/A' }}</p>
+            </div>
+          </div>
+          <div class="detail-item">
+            <mat-icon>category</mat-icon>
+            <div>
+              <label>Category</label>
+              <p>{{ property.categoryName || 'N/A' }}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="detail-section" *ngIf="property.roomCount || property.bathroomCount">
+          <div class="detail-item" *ngIf="property.roomCount">
+            <mat-icon>meeting_room</mat-icon>
+            <div>
+              <label>Rooms</label>
+              <p>{{ property.roomCount }}</p>
+            </div>
+          </div>
+          <div class="detail-item" *ngIf="property.bathroomCount">
+            <mat-icon>bathroom</mat-icon>
+            <div>
+              <label>Bathrooms</label>
+              <p>{{ property.bathroomCount }}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="detail-section" *ngIf="property.floorNumber || property.buildingAge">
+          <div class="detail-item" *ngIf="property.floorNumber">
+            <mat-icon>layers</mat-icon>
+            <div>
+              <label>Floor</label>
+              <p>{{ property.floorNumber }}</p>
+            </div>
+          </div>
+          <div class="detail-item" *ngIf="property.buildingAge">
+            <mat-icon>calendar_today</mat-icon>
+            <div>
+              <label>Building Age</label>
+              <p>{{ property.buildingAge }} years</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="detail-section full-width">
+          <div class="detail-item">
+            <mat-icon>location_on</mat-icon>
+            <div>
+              <label>Address</label>
+              <p>{{ property.address }}</p>
+              <p *ngIf="property.district">{{ property.district }}, {{ property.city }}</p>
+              <p *ngIf="!property.district">{{ property.city }}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="detail-section full-width" *ngIf="property.description">
+          <div class="detail-item">
+            <mat-icon>description</mat-icon>
+            <div>
+              <label>Description</label>
+              <p class="description">{{ property.description }}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="detail-section full-width" *ngIf="property.ownerName">
+          <div class="detail-item">
+            <mat-icon>person</mat-icon>
+            <div>
+              <label>Owner</label>
+              <p>{{ property.ownerName }}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-item">
+            <mat-icon>event</mat-icon>
+            <div>
+              <label>Created</label>
+              <p>{{ property.createdAt | date: 'medium' }}</p>
+            </div>
+          </div>
+          <div class="detail-item" *ngIf="property.updatedAt">
+            <mat-icon>update</mat-icon>
+            <div>
+              <label>Updated</label>
+              <p>{{ property.updatedAt | date: 'medium' }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  <mat-tab-group class="property-tabs">
+    <mat-tab label="Images">
+      <div class="tab-content">
+        <app-property-image-upload [propertyId]="propertyId"></app-property-image-upload>
+      </div>
+    </mat-tab>
+
+    <mat-tab label="Features" *ngIf="property.features && property.features.length > 0">
+      <div class="tab-content">
+        <mat-card>
+          <mat-card-content>
+            <mat-chip-set>
+              <mat-chip *ngFor="let feature of property.features">
+                {{ feature }}
+              </mat-chip>
+            </mat-chip-set>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</div>
+<div class="loading-container" *ngIf="loading">
+  <mat-spinner></mat-spinner>
+</div>

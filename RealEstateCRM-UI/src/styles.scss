@@ -1,0 +1,102 @@
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+@import 'ngx-toastr/toastr';
+
+
+@media (max-width: 1024px) {
+
+  mat-card {
+    margin: 12px !important;
+  }
+
+  mat-card-header {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  mat-card-header button {
+    margin-left: auto;
+  }
+
+  table {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  mat-card {
+    margin: 8px !important;
+    max-width: 100% !important;
+  }
+
+  mat-card-header {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+
+  mat-card-header button {
+    width: 100%;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .form-actions button {
+    width: 100%;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  th, td {
+    padding: 8px 12px;
+  }
+
+  .action-buttons {
+    display: flex;
+    gap: 4px;
+  }
+
+  .filter-actions {
+    flex-direction: column;
+  }
+
+  .filter-actions button {
+    width: 100%;
+  }
+
+  .range-inputs {
+    flex-direction: column !important;
+  }
+
+  .two-columns {
+    grid-template-columns: 1fr !important;
+  }
+
+  .navbar .logo {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  mat-card-title {
+    font-size: 16px;
+  }
+
+  th {
+    font-size: 12px;
+  }
+
+  td {
+    font-size: 12px;
+  }
+}

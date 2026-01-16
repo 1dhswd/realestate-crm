@@ -1,0 +1,82 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Property Images</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <div class="upload-section">
+      <div class="drop-zone"
+           [class.drag-over]="dragOver"
+           (dragover)="onDragOver($event)"
+           (dragleave)="onDragLeave($event)"
+           (drop)="onDrop($event)">
+        <mat-icon>cloud_upload</mat-icon>
+        <p>Drag & drop images here or click to browse</p>
+        <input type="file"
+               #fileInput
+               multiple
+               accept="image/*"
+               (change)="onFileSelected($event)"
+               style="display: none">
+        <button mat-raised-button color="primary" (click)="fileInput.click()">
+          Select Images
+        </button>
+      </div>
+
+      <div class="preview-section" *ngIf="selectedFiles.length > 0">
+        <h3>Selected Files ({{ selectedFiles.length }})</h3>
+        <div class="preview-grid">
+          <div class="preview-item" *ngFor="let url of previewUrls; let i = index">
+            <img [src]="url" alt="Preview">
+            <button mat-icon-button class="remove-btn" (click)="removeSelectedFile(i)">
+              <mat-icon>close</mat-icon>
+            </button>
+            <p class="file-name">{{ selectedFiles[i].name }}</p>
+          </div>
+        </div>
+        <button mat-raised-button
+                color="primary"
+                (click)="uploadImages()"
+                [disabled]="uploading">
+          <mat-spinner *ngIf="uploading" diameter="20"></mat-spinner>
+          {{ uploading ? 'Uploading...' : 'Upload Images' }}
+        </button>
+      </div>
+    </div>
+
+    <div class="uploaded-section" *ngIf="images.length > 0">
+      <h3>Uploaded Images ({{ images.length }})</h3>
+      <div class="images-grid" *ngIf="!loading">
+        <div class="image-item" *ngFor="let image of images">
+          <img [src]="getImageUrl(image.imageUrl)" [alt]="image.fileName">
+          <div class="image-overlay">
+            <button mat-icon-button
+                    [color]="image.isPrimary ? 'accent' : 'primary'"
+                    (click)="setPrimaryImage(image.id)"
+                    [disabled]="image.isPrimary"
+                    matTooltip="Set as primary">
+              <mat-icon>{{ image.isPrimary ? 'star' : 'star_border' }}</mat-icon>
+            </button>
+            <button mat-icon-button
+                    color="warn"
+                    (click)="deleteImage(image.id)"
+                    matTooltip="Delete">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </div>
+          <div class="image-info">
+            <span class="badge primary" *ngIf="image.isPrimary">Primary</span>
+            <p>{{ image.fileName }}</p>
+            <small>{{ (image.fileSize / 1024 / 1024).toFixed(2) }} MB</small>
+          </div>
+        </div>
+      </div>
+      <mat-spinner *ngIf="loading"></mat-spinner>
+    </div>
+
+    <div *ngIf="images.length === 0 && !loading" class="no-images">
+      <mat-icon>photo_library</mat-icon>
+      <p>No images uploaded yet</p>
+    </div>
+  </mat-card-content>
+</mat-card>

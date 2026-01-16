@@ -1,0 +1,125 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{ isEditMode ? 'Edit Property' : 'Add Property' }}</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <form [formGroup]="propertyForm" (ngSubmit)="onSubmit()">
+      <div class="form-row">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Title</mat-label>
+          <input matInput formControlName="title" required>
+          <mat-error *ngIf="propertyForm.get('title')?.hasError('required')">
+            Title is required
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="form-row">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Description</mat-label>
+          <textarea matInput formControlName="description" rows="3"></textarea>
+        </mat-form-field>
+      </div>
+
+      <div class="form-row two-columns">
+        <mat-form-field appearance="outline">
+          <mat-label>Price (TRY)</mat-label>
+          <input matInput type="number" formControlName="price" required>
+          <mat-error *ngIf="propertyForm.get('price')?.hasError('required')">
+            Price is required
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Area (m²)</mat-label>
+          <input matInput type="number" formControlName="area" required>
+          <mat-error *ngIf="propertyForm.get('area')?.hasError('required')">
+            Area is required
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="form-row">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Address</mat-label>
+          <input matInput formControlName="address" required>
+          <mat-error *ngIf="propertyForm.get('address')?.hasError('required')">
+            Address is required
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="form-row two-columns">
+        <mat-form-field appearance="outline">
+          <mat-label>City</mat-label>
+          <mat-select formControlName="city" required>
+            <mat-option *ngFor="let city of cities" [value]="city">
+              {{ city }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>District</mat-label>
+          <input matInput formControlName="district">
+        </mat-form-field>
+      </div>
+
+      <div class="form-row two-columns">
+        <mat-form-field appearance="outline">
+          <mat-label>Property Type</mat-label>
+          <mat-select formControlName="typeId" required>
+            <mat-option *ngFor="let type of propertyTypes" [value]="type.id">
+              {{ type.name }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Category</mat-label>
+          <mat-select formControlName="categoryId" required>
+            <mat-option *ngFor="let category of propertyCategories" [value]="category.id">
+              {{ category.name }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="form-row two-columns">
+        <mat-form-field appearance="outline">
+          <mat-label>Room Count</mat-label>
+          <input matInput type="number" formControlName="roomCount">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Bathroom Count</mat-label>
+          <input matInput type="number" formControlName="bathroomCount">
+        </mat-form-field>
+      </div>
+
+      <div class="form-row two-columns">
+        <mat-form-field appearance="outline">
+          <mat-label>Floor Number</mat-label>
+          <input matInput type="number" formControlName="floorNumber">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Building Age (years)</mat-label>
+          <input matInput type="number" formControlName="buildingAge">
+        </mat-form-field>
+      </div>
+
+      <div class="form-row">
+        <mat-checkbox formControlName="isActive">Active</mat-checkbox>
+      </div>
+
+      <div class="form-actions">
+        <button mat-raised-button type="button" (click)="onCancel()">Cancel</button>
+        <button mat-raised-button color="primary" type="submit" [disabled]="loading || propertyForm.invalid">
+          {{ loading ? 'Saving...' : (isEditMode ? 'Update' : 'Create') }}
+        </button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

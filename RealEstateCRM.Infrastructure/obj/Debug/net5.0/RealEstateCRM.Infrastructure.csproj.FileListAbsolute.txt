@@ -1,0 +1,17 @@
+C:\Users\Eren\Desktop\RealEstateCRM\RealEstateCRM.Infrastructure\bin\Debug\net5.0\RealEstateCRM.Infrastructure.deps.json
+C:\Users\Eren\Desktop\RealEstateCRM\RealEstateCRM.Infrastructure\bin\Debug\net5.0\RealEstateCRM.Infrastructure.dll
+C:\Users\Eren\Desktop\RealEstateCRM\RealEstateCRM.Infrastructure\bin\Debug\net5.0\RealEstateCRM.Infrastructure.pdb
+C:\Users\Eren\Desktop\RealEstateCRM\RealEstateCRM.Infrastructure\bin\Debug\net5.0\RealEstateCRM.Application.dll
+C:\Users\Eren\Desktop\RealEstateCRM\RealEstateCRM.Infrastructure\bin\Debug\net5.0\RealEstateCRM.Domain.dll
+C:\Users\Eren\Desktop\RealEstateCRM\RealEstateCRM.Infrastructure\bin\Debug\net5.0\RealEstateCRM.Application.pdb
+C:\Users\Eren\Desktop\RealEstateCRM\RealEstateCRM.Infrastructure\bin\Debug\net5.0\RealEstateCRM.Domain.pdb
+C:\Users\Eren\Desktop\RealEstateCRM\RealEstateCRM.Infrastructure\obj\Debug\net5.0\RealEstateCRM.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Eren\Desktop\RealEstateCRM\RealEstateCRM.Infrastructure\obj\Debug\net5.0\RealEstateCRM.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Eren\Desktop\RealEstateCRM\RealEstateCRM.Infrastructure\obj\Debug\net5.0\RealEstateCRM.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Eren\Desktop\RealEstateCRM\RealEstateCRM.Infrastructure\obj\Debug\net5.0\RealEstateCRM.Infrastructure.AssemblyInfo.cs
+C:\Users\Eren\Desktop\RealEstateCRM\RealEstateCRM.Infrastructure\obj\Debug\net5.0\RealEstateCRM.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Eren\Desktop\RealEstateCRM\RealEstateCRM.Infrastructure\obj\Debug\net5.0\RealEstateCRM.Infrastructure.dll
+C:\Users\Eren\Desktop\RealEstateCRM\RealEstateCRM.Infrastructure\obj\Debug\net5.0\ref\RealEstateCRM.Infrastructure.dll
+C:\Users\Eren\Desktop\RealEstateCRM\RealEstateCRM.Infrastructure\obj\Debug\net5.0\RealEstateCRM.Infrastructure.pdb
+C:\Users\Eren\Desktop\RealEstateCRM\RealEstateCRM.Infrastructure\bin\Debug\net5.0\ref\RealEstateCRM.Infrastructure.dll
+C:\Users\Eren\Desktop\RealEstateCRM\RealEstateCRM.Infrastructure\obj\Debug\net5.0\RealEstateCRM.Infrastructure.csproj.CopyComplete

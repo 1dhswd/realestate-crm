@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\RealEstateCRM-UI",
+    "\\RealEstateCRM-UI\\src",
+    "\\RealEstateCRM-UI\\src\\app",
+    "\\RealEstateCRM-UI\\src\\app\\core",
+    "\\RealEstateCRM-UI\\src\\app\\core\\services",
+    "\\RealEstateCRM-UI\\src\\app\\features",
+    "\\RealEstateCRM-UI\\src\\app\\features\\auth",
+    "\\RealEstateCRM-UI\\src\\app\\features\\leads",
+    "\\RealEstateCRM-UI\\src\\app\\features\\leads\\lead-list"
+  ],
+  "SelectedNode": "\\RealEstateCRM-UI\\src\\app\\features\\leads\\lead-list\\lead-list.component.ts",
+  "PreviewInSolutionExplorer": true
+}

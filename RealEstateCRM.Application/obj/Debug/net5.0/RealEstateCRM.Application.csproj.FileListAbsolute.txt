@@ -1,0 +1,15 @@
+C:\Users\Eren\Desktop\RealEstateCRM\RealEstateCRM.Application\bin\Debug\net5.0\RealEstateCRM.Application.deps.json
+C:\Users\Eren\Desktop\RealEstateCRM\RealEstateCRM.Application\bin\Debug\net5.0\RealEstateCRM.Application.dll
+C:\Users\Eren\Desktop\RealEstateCRM\RealEstateCRM.Application\bin\Debug\net5.0\RealEstateCRM.Application.pdb
+C:\Users\Eren\Desktop\RealEstateCRM\RealEstateCRM.Application\bin\Debug\net5.0\RealEstateCRM.Domain.dll
+C:\Users\Eren\Desktop\RealEstateCRM\RealEstateCRM.Application\bin\Debug\net5.0\RealEstateCRM.Domain.pdb
+C:\Users\Eren\Desktop\RealEstateCRM\RealEstateCRM.Application\obj\Debug\net5.0\RealEstateCRM.Application.csproj.AssemblyReference.cache
+C:\Users\Eren\Desktop\RealEstateCRM\RealEstateCRM.Application\obj\Debug\net5.0\RealEstateCRM.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Eren\Desktop\RealEstateCRM\RealEstateCRM.Application\obj\Debug\net5.0\RealEstateCRM.Application.AssemblyInfoInputs.cache
+C:\Users\Eren\Desktop\RealEstateCRM\RealEstateCRM.Application\obj\Debug\net5.0\RealEstateCRM.Application.AssemblyInfo.cs
+C:\Users\Eren\Desktop\RealEstateCRM\RealEstateCRM.Application\obj\Debug\net5.0\RealEstateCRM.Application.csproj.CoreCompileInputs.cache
+C:\Users\Eren\Desktop\RealEstateCRM\RealEstateCRM.Application\obj\Debug\net5.0\RealEstateCRM.Application.dll
+C:\Users\Eren\Desktop\RealEstateCRM\RealEstateCRM.Application\obj\Debug\net5.0\ref\RealEstateCRM.Application.dll
+C:\Users\Eren\Desktop\RealEstateCRM\RealEstateCRM.Application\obj\Debug\net5.0\RealEstateCRM.Application.pdb
+C:\Users\Eren\Desktop\RealEstateCRM\RealEstateCRM.Application\bin\Debug\net5.0\ref\RealEstateCRM.Application.dll
+C:\Users\Eren\Desktop\RealEstateCRM\RealEstateCRM.Application\obj\Debug\net5.0\RealEstateCRM.Application.csproj.CopyComplete

@@ -1,0 +1,34 @@
+<mat-toolbar color="primary" class="navbar">
+  <span class="logo">RealEstate CRM</span>
+
+  <span class="spacer"></span>
+
+  <ng-container *ngIf="currentUser; else loginButton">
+    <button mat-button [matMenuTriggerFor]="menu" class="user-button">
+      <span class="user-name-toolbar">
+        {{ currentUser.firstName }} {{ currentUser.lastName }}
+      </span>
+    </button>
+  </ng-container>
+
+  <ng-template #loginButton>
+    <button mat-button routerLink="/login">
+      Login
+    </button>
+  </ng-template>
+
+  <mat-menu #menu="matMenu">
+    <div class="user-info">
+      <p class="user-name">
+        {{ currentUser?.firstName }} {{ currentUser?.lastName }}
+      </p>
+      <p class="user-email">{{ currentUser?.email }}</p>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <button mat-menu-item (click)="logout()">
+      <span>Logout</span>
+    </button>
+  </mat-menu>
+</mat-toolbar>
