@@ -12,6 +12,7 @@ Modern, ölçeklenebilir ve kullanıcı dostu bir Gayrimenkul CRM (Customer Rela
 <img width="1907" height="966" alt="image" src="https://github.com/user-attachments/assets/de59feb0-46e9-4b3c-a66f-ce97f19ef8ac" />
 <img width="1901" height="998" alt="image" src="https://github.com/user-attachments/assets/aa218c11-42a9-49ac-8f28-7d5a9057ee59" />
 <img width="785" height="909" alt="image" src="https://github.com/user-attachments/assets/eb44e3c1-507c-49f3-a3ff-c9aead9ff87b" />
+<img width="884" height="1003" alt="image" src="https://github.com/user-attachments/assets/fb39a6d7-8739-4c9e-98c2-b8f38f744b88" />
 
 
 
