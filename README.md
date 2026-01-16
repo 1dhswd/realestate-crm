@@ -5,6 +5,15 @@ Modern, ölçeklenebilir ve kullanıcı dostu bir Gayrimenkul CRM (Customer Rela
 (A modern, scalable, and user-friendly Real Estate CRM (Customer Relationship Management) application. The project was developed to enable real estate agencies and individual consultants to professionally manage client, property, and lead processes from a single dashboard.)
 
 
+<img width="1890" height="862" alt="image" src="https://github.com/user-attachments/assets/1f1ac399-c84b-475e-9198-9f9c99a29d1e" />
+<img width="1899" height="675" alt="image" src="https://github.com/user-attachments/assets/9a5cde4f-e1d4-4cac-b91e-b3012e93a596" />
+<img width="1923" height="614" alt="image" src="https://github.com/user-attachments/assets/732f1795-80be-4bf3-9ccf-5bb4ffd1480f" />
+<img width="1894" height="652" alt="image" src="https://github.com/user-attachments/assets/2ace668c-73d9-44db-9a08-766c129c0991" />
+<img width="1907" height="966" alt="image" src="https://github.com/user-attachments/assets/de59feb0-46e9-4b3c-a66f-ce97f19ef8ac" />
+<img width="1901" height="998" alt="image" src="https://github.com/user-attachments/assets/aa218c11-42a9-49ac-8f28-7d5a9057ee59" />
+<img width="785" height="909" alt="image" src="https://github.com/user-attachments/assets/eb44e3c1-507c-49f3-a3ff-c9aead9ff87b" />
+
+
 
 ## Özellikler
 
