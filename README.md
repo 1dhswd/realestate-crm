@@ -115,7 +115,7 @@ http://localhost:4200
 
 ## Proje Yapısı (Backend)
 
-``
+```
 
 RealEstateCRM
 ├── RealEstateCRM.API
@@ -178,7 +178,7 @@ RealEstateCRM
 │
 └── RealEstateCRM.sln
 
-``
+```
 
 ### Backend
 
