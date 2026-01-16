@@ -211,7 +211,6 @@ Backend `appsettings.json` içinde:
 }
 ```
 
----
 
 ## Responsive Desteği
 
@@ -221,7 +220,6 @@ Backend `appsettings.json` içinde:
 
 Tüm tablolar, formlar ve toolbar bileşenleri **mobil uyumlu** olacak şekilde optimize edilmiştir.
 
----
 
 ##  Geliştirme Notları
 
@@ -229,6 +227,212 @@ Tüm tablolar, formlar ve toolbar bileşenleri **mobil uyumlu** olacak şekilde 
 - Temiz ve sürdürülebilir kod
 - Tekrar kullanılabilir UI bileşenleri
 - Global stiller `styles.scss` üzerinden yönetilir
+
+## Veritabanı
+
+```
+CREATE DATABASE RealEstateCRM
+GO
+
+USE RealEstateCRM
+GO
+
+CREATE TABLE Users (
+    Id INT PRIMARY KEY IDENTITY(1,1),
+    FirstName NVARCHAR(50) NOT NULL,
+    LastName NVARCHAR(50) NOT NULL,
+    Email NVARCHAR(100) NOT NULL UNIQUE,
+    PasswordHash NVARCHAR(255) NOT NULL,
+    PhoneNumber NVARCHAR(20),
+    IsActive BIT NOT NULL DEFAULT 1,
+    CreatedAt DATETIME2 NOT NULL DEFAULT GETDATE(),
+    UpdatedAt DATETIME2 NULL,
+    LastLoginAt DATETIME2 NULL
+)
+GO
+
+CREATE TABLE Roles (
+    Id INT PRIMARY KEY IDENTITY(1,1),
+    Name NVARCHAR(50) NOT NULL UNIQUE,
+    Description NVARCHAR(200),
+    CreatedAt DATETIME2 NOT NULL DEFAULT GETDATE()
+)
+GO
+
+CREATE TABLE UserRoles (
+    UserId INT NOT NULL,
+    RoleId INT NOT NULL,
+    AssignedAt DATETIME2 NOT NULL DEFAULT GETDATE(),
+    PRIMARY KEY (UserId, RoleId),
+    FOREIGN KEY (UserId) REFERENCES Users(Id) ON DELETE CASCADE,
+    FOREIGN KEY (RoleId) REFERENCES Roles(Id) ON DELETE CASCADE
+)
+GO
+
+CREATE TABLE PropertyCategories (
+    Id INT PRIMARY KEY IDENTITY(1,1),
+    Name NVARCHAR(50) NOT NULL UNIQUE,
+    Description NVARCHAR(200),
+    IsActive BIT NOT NULL DEFAULT 1
+)
+GO
+
+CREATE TABLE PropertyTypes (
+    Id INT PRIMARY KEY IDENTITY(1,1),
+    Name NVARCHAR(50) NOT NULL UNIQUE,
+    IsActive BIT NOT NULL DEFAULT 1
+)
+GO
+
+CREATE TABLE Properties (
+    Id INT PRIMARY KEY IDENTITY(1,1),
+    Title NVARCHAR(200) NOT NULL,
+    Description NVARCHAR(MAX),
+    CategoryId INT NOT NULL,
+    TypeId INT NOT NULL,
+    Price DECIMAL(18,2) NOT NULL,
+    Area DECIMAL(10,2) NOT NULL, -- m2
+    RoomCount INT,
+    BathroomCount INT,
+    FloorNumber INT,
+    BuildingAge INT,
+    Address NVARCHAR(500),
+    City NVARCHAR(100) NOT NULL,
+    District NVARCHAR(100) NOT NULL,
+    Latitude DECIMAL(10,8),
+    Longitude DECIMAL(11,8),
+    IsActive BIT NOT NULL DEFAULT 1,
+    IsFeatured BIT NOT NULL DEFAULT 0,
+    ViewCount INT NOT NULL DEFAULT 0,
+    OwnerId INT NOT NULL,
+    CreatedAt DATETIME2 NOT NULL DEFAULT GETDATE(),
+    UpdatedAt DATETIME2 NULL,
+    PublishedAt DATETIME2 NULL,
+    FOREIGN KEY (CategoryId) REFERENCES PropertyCategories(Id),
+    FOREIGN KEY (TypeId) REFERENCES PropertyTypes(Id),
+    FOREIGN KEY (OwnerId) REFERENCES Users(Id)
+)
+GO
+
+CREATE TABLE PropertyFeatures (
+    Id INT PRIMARY KEY IDENTITY(1,1),
+    Name NVARCHAR(100) NOT NULL UNIQUE,
+    Icon NVARCHAR(50),
+    IsActive BIT NOT NULL DEFAULT 1
+)
+GO
+
+CREATE TABLE PropertyPropertyFeatures (
+    PropertyId INT NOT NULL,
+    FeatureId INT NOT NULL,
+    PRIMARY KEY (PropertyId, FeatureId),
+    FOREIGN KEY (PropertyId) REFERENCES Properties(Id) ON DELETE CASCADE,
+    FOREIGN KEY (FeatureId) REFERENCES PropertyFeatures(Id) ON DELETE CASCADE
+)
+GO
+
+CREATE TABLE PropertyImages (
+    Id INT PRIMARY KEY IDENTITY(1,1),
+    PropertyId INT NOT NULL,
+    ImageUrl NVARCHAR(500) NOT NULL,
+    DisplayOrder INT NOT NULL DEFAULT 0,
+    IsMainImage BIT NOT NULL DEFAULT 0,
+    UploadedAt DATETIME2 NOT NULL DEFAULT GETDATE(),
+    FOREIGN KEY (PropertyId) REFERENCES Properties(Id) ON DELETE CASCADE
+)
+GO
+
+CREATE TABLE Customers (
+    Id INT PRIMARY KEY IDENTITY(1,1),
+    FirstName NVARCHAR(50) NOT NULL,
+    LastName NVARCHAR(50) NOT NULL,
+    Email NVARCHAR(100),
+    PhoneNumber NVARCHAR(20) NOT NULL,
+    Address NVARCHAR(500),
+    Notes NVARCHAR(MAX),
+    Source NVARCHAR(50), -- Web, Referans, Sosyal Medya vs.
+    AssignedAgentId INT,
+    CreatedAt DATETIME2 NOT NULL DEFAULT GETDATE(),
+    UpdatedAt DATETIME2 NULL,
+    FOREIGN KEY (AssignedAgentId) REFERENCES Users(Id)
+)
+GO
+
+CREATE TABLE CustomerStatuses (
+    Id INT PRIMARY KEY IDENTITY(1,1),
+    Name NVARCHAR(50) NOT NULL UNIQUE,
+    ColorCode NVARCHAR(7), -- #FF5733
+    DisplayOrder INT NOT NULL DEFAULT 0
+)
+GO
+
+CREATE TABLE Leads (
+    Id INT PRIMARY KEY IDENTITY(1,1),
+    CustomerId INT NOT NULL,
+    PropertyId INT NULL,
+    StatusId INT NOT NULL,
+    Budget DECIMAL(18,2),
+    Notes NVARCHAR(MAX),
+    NextFollowUpDate DATETIME2,
+    CreatedByUserId INT NOT NULL,
+    CreatedAt DATETIME2 NOT NULL DEFAULT GETDATE(),
+    UpdatedAt DATETIME2 NULL,
+    ClosedAt DATETIME2 NULL,
+    FOREIGN KEY (CustomerId) REFERENCES Customers(Id) ON DELETE CASCADE,
+    FOREIGN KEY (PropertyId) REFERENCES Properties(Id),
+    FOREIGN KEY (StatusId) REFERENCES CustomerStatuses(Id),
+    FOREIGN KEY (CreatedByUserId) REFERENCES Users(Id)
+)
+GO
+
+CREATE TABLE Appointments (
+    Id INT PRIMARY KEY IDENTITY(1,1),
+    LeadId INT NOT NULL,
+    PropertyId INT NOT NULL,
+    AgentId INT NOT NULL,
+    AppointmentDate DATETIME2 NOT NULL,
+    Duration INT NOT NULL DEFAULT 60, -- dakika
+    Location NVARCHAR(300),
+    Notes NVARCHAR(MAX),
+    Status NVARCHAR(50) NOT NULL, -- Scheduled, Completed, Cancelled
+    CreatedAt DATETIME2 NOT NULL DEFAULT GETDATE(),
+    UpdatedAt DATETIME2 NULL,
+    FOREIGN KEY (LeadId) REFERENCES Leads(Id),
+    FOREIGN KEY (PropertyId) REFERENCES Properties(Id),
+    FOREIGN KEY (AgentId) REFERENCES Users(Id)
+)
+GO
+
+CREATE TABLE Offers (
+    Id INT PRIMARY KEY IDENTITY(1,1),
+    LeadId INT NOT NULL,
+    PropertyId INT NOT NULL,
+    OfferedPrice DECIMAL(18,2) NOT NULL,
+    Message NVARCHAR(MAX),
+    Status NVARCHAR(50) NOT NULL, -- Pending, Accepted, Rejected, Countered
+    ValidUntil DATETIME2 NOT NULL,
+    CreatedByUserId INT NOT NULL,
+    CreatedAt DATETIME2 NOT NULL DEFAULT GETDATE(),
+    UpdatedAt DATETIME2 NULL,
+    RespondedAt DATETIME2 NULL,
+    FOREIGN KEY (LeadId) REFERENCES Leads(Id),
+    FOREIGN KEY (PropertyId) REFERENCES Properties(Id),
+    FOREIGN KEY (CreatedByUserId) REFERENCES Users(Id)
+)
+GO
+
+CREATE TABLE ActivityLogs (
+    Id INT PRIMARY KEY IDENTITY(1,1),
+    UserId INT NOT NULL,
+    EntityType NVARCHAR(50) NOT NULL, -- Property, Customer, Lead vs.
+    EntityId INT NOT NULL,
+    Action NVARCHAR(50) NOT NULL, -- Created, Updated, Deleted, Viewed
+    Description NVARCHAR(500),
+    CreatedAt DATETIME2 NOT NULL DEFAULT GETDATE(),
+    FOREIGN KEY (UserId) REFERENCES Users(Id)
+)
+GO
+```
 
 
 
@@ -238,7 +442,6 @@ Tüm tablolar, formlar ve toolbar bileşenleri **mobil uyumlu** olacak şekilde 
 
 Full Stack .NET & Angular Developer
 
----
 
 ## Lisans
 
